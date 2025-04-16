@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-between items-center px-4 sm:px-10 py-3 border-b bg-white'>
       <div className='flex items-center gap-2 text-xs'>
-        <img onClick={() => navigate('/')} className='w-3 sm:w-[5rem] cursor-pointer'   src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Hinduja_Group_Logo.svg/1200px-Hinduja_Group_Logo.svg.png" alt="" />
+        <img onClick={() => navigate('/')} className='w-3 sm:w-[5rem] cursor-pointer'   src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Hinduja_Group_Logo.svg/1200px-Hinduja_Group_Logo.svg.png" alt="logo" />
        
       </div>
       <button onClick={() => logout()} className='bg-primary text-white text-sm px-10 py-2 rounded-full'>Logout</button>
