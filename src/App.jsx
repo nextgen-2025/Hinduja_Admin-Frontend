@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { DoctorContext } from './context/DoctorContext';
 import { AdminContext } from './context/AdminContext';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Link } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './components/Navbar'
@@ -17,11 +17,14 @@ import DoctorProfile from './pages/Doctor/DoctorProfile';
 import NewAppoinment from './pages/Admin/NewAppoinment';
 import AddDoctorsNew from './pages/Admin/AddDoctorsNew';
 import DoctorsListNew from './pages/Admin/DoctorsListNew';
+import DoctorManagement from './components/DoctorManagement';
+import BookingsView from './components/BookingsView';
 
 const App = () => {
 
   const { dToken } = useContext(DoctorContext)
   const { aToken } = useContext(AdminContext)
+  const [activeTab, setActiveTab] = useState('doctors');
 
   return dToken || aToken ? (
     <div className='bg-[#F8F9FD]'>
@@ -41,7 +44,8 @@ const App = () => {
           <Route path='/new-appoinment' element={<NewAppoinment />} />
           <Route path='/new-doctors' element={<AddDoctorsNew />} />
           <Route path='/new-doctorslist' element={<DoctorsListNew />} />
-
+          <Route path='/doctor-management' element={<DoctorManagement />} />
+          <Route path='/bookings-view' element={<BookingsView />} />
         </Routes>
       </div>
     </div>
