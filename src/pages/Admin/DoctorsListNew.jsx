@@ -29,7 +29,7 @@ const DoctorsListNew = () => {
   const fetchDoctors = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:4000/api/doctors');
+      const response = await axios.get('https://hinduja-backend-production.up.railway.app/api/doctors');
       setDoctors(response.data);
       setError('');
     } catch (err) {

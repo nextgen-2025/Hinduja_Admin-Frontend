@@ -7,7 +7,7 @@ const NewAppoinment = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/bookings');
+        const response = await axios.get('https://hinduja-backend-production.up.railway.app/api/bookings');
         setBookings(response.data);
       } catch (error) {
         console.error('Error fetching bookings:', error);

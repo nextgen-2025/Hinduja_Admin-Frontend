@@ -44,7 +44,7 @@ const AddDoctorsNew = () => {
     setSuccess("");
 
     try {
-      const response = await axios.post('http://localhost:4000/api/doctors', doctor);
+      const response = await axios.post('https://hinduja-backend-production.up.railway.app/api/doctors', doctor);
       setSuccess("Doctor added successfully!");
       // Reset form
       setDoctor({
