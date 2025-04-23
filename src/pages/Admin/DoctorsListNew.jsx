@@ -53,7 +53,7 @@ const DoctorsListNew = () => {
     try {
       setError('');
       setSuccess('');
-      const response = await axios.put(`http://localhost:4000/api/doctors/${doctorId}`, editForm);
+      const response = await axios.put(`https://hinduja-backend-production.up.railway.app/api/doctors/${doctorId}`, editForm);
       setSuccess('Doctor updated successfully');
       setEditingDoctor(null);
       fetchDoctors(); // Refresh the list
@@ -68,7 +68,7 @@ const DoctorsListNew = () => {
       try {
         setError('');
         setSuccess('');
-        await axios.delete(`http://localhost:4000/api/doctors/${doctorId}`);
+        await axios.delete(`https://hinduja-backend-production.up.railway.app/api/doctors/${doctorId}`);
         setSuccess('Doctor deleted successfully');
         fetchDoctors(); // Refresh the list
       } catch (err) {
